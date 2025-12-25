@@ -1,0 +1,241 @@
+.forecast-wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.current-location h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.current-forecast {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.current-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.current-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #667eea;
+  font-weight: 700;
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f5576c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.current-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.current-icon img {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.current-summary h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.current-summary p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.wind-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #666;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.wind-label {
+  font-weight: 600;
+}
+
+.upcoming-forecast {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.upcoming-title {
+  font-size: 1.8rem;
+  color: #667eea;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.forecast-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.period-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.period-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.period-temp {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.period-summary {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.error-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .current-forecast {
+    padding: 1.5rem;
+  }
+  
+  .current-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .current-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+  }
+  
+  .current-icon img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .forecast-card {
+    padding: 1rem;
+  }
+  
+  .period-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .period-temp {
+    font-size: 1.5rem;
+  }
+  
+  .upcoming-forecast {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
